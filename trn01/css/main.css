@@ -1,0 +1,12 @@
+.wrap {}
+
+.top_banner {
+    padding: 30px 0;
+    background: #f7f7f7;
+}
+
+.top_banner .container {
+    width: 1200px;
+    margin: 0 auto;
+    
+}
