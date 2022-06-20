@@ -54,4 +54,48 @@ $(function () {
     });
 
 
+    $('.movie_arrows i:nth-child(1)').on('click', function () {
+        $('.movie video').trigger('play');
+    });
+
+    $('.movie_arrows i:nth-child(2)').on('click', function () {
+        $('.movie video').trigger('pause');
+        //trigger 잘만들어준 함수를 쏴버린다라는 뜻
+    });
+
+    $('#bgndVideo').YTPlayer({
+        videoURL: 'https://youtu.be/Pmt3tms9HdI',
+        containment: '.utb',
+        autoPlay: true,
+        mute: true,
+        startAt: 0,
+        opacity: 1,
+        //HTML꺼 그대로가져온것
+        showControls: false,
+        playOnlyIfVisible: true,
+        //이 두줄은 https://github.com/pupunzi/jquery.mb.YTPlayer/wiki에 data-property:참조
+    });
+
+    $('.utb i:nth-child(1)').on('click', function () {
+        $('#bgndVideo').YTPPlay();
+    });
+
+    $('.utb i:nth-child(2)').on('click', function () {
+        $('#bgndVideo').YTPPause();
+    });
+
+    $('.utb i:nth-child(3)').on('click', function () {
+        $('#bgndVideo').YTPFullscreen();
+    });
+    //이 메소드들은 https://github.com/pupunzi/jquery.mb.YTPlayer/wiki에 External methods참조
+
+
+    $('.product_slider').slick({
+        arrows: false,
+        centerMode: true,
+        slidesToShow: 5,
+        dots: true,
+    });
+
+
 });

@@ -1,0 +1,31 @@
+함수로 만들어진 것들은 제일 위로 끌어올려진다 호이스팅?!
+변수도 호이스팅이 된다.(끌어올려진다)
+
+document.querySelector('.top_banner i').addEventListener('click', bannerClose);
+
+    function bannerClose() {
+        document.querySelector('.top_banner').style.display = 'none';
+    }
+
+제이쿼리는 함수를 계속 이어씀(메서드 체인)
+
+자기자신을 움직이는 건 transform 
+
+슬라이드 이벤트 : afterChange (슬릭이 만들어 놓은 이벤트) + class 설계
+반응형 됐을 때 사이즈에 따라 변하게 하기 위해 background로 깜
+슬라이드 돌리기 위해 부모박스와 자식박스가 필요함+이미지 깔 백그라운드 총 3박스
+
+alert : 브라우저가 가진 함수
+
+
+figure은 이미지를 감싸는 태그
+
+():함수 {}:객채-모든것들이 객체 []:배열-순서가 있는 집합
+
+cover:어떻게든 다 채워 contain:어떻게든 다 보여줘
+ background: url('../img/mainvisual01.jpg') no-repeat center center/cover;
+
+inline-block:패딩,마진다 먹고 자기 사이즈만큼만 늘어남 (block은 width를 고정으로 줘야하고 inline은 상하패딩이 안먹힘
+
+/*a는 인라인 속성을 가지기 때문에 width, height, 상하마진패딩안먹힘
+     패딩은 먹히는 것 처럼 보이지만 실제 레이아웃에는 영향을 안미침*/ 

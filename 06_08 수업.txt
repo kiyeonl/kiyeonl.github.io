@@ -1,0 +1,60 @@
+4일 : HTML, CSS ,JQUERY<slick, fullpage 플러그인> 실력향상
+리액트는 이해해야하는것, 알고있어야하는것이많아,,
+
++3~4일 : 바닐라자바스크립트
+
++4일 ECMA6 최신문법 배우고
+
+그 다음 react 까는 법, 사용법 : 진입과정이 힘들다,,
+
+
+CSS
+
+DISPLAY : 어떻게
+display none
+display block : 박스 - 좌우상하 패딩마진먹음
+display inline : 글자 - 좌우패딩마진만먹음-상하는안먹음
+display inline-block 
+display table
+display flex
+
+POSITION : 어디에 -> 좌표를 가진다.
+position static = display none 역할 포지션이아니게 하는것 absolute를 다 가라앉힘 내려오는 메뉴를 
+position absolute - 떠오르고 자기요소만큼 쪼그라듦 
+position relative - 자기 자신을 기준으로 삼을 때
+position fixed - 기준이 화면이 됨 body 밖에 밀어놓아도 스크롤바가 안생김
+position sticky - 좌표의 고정
+
+clear fix?
+
+hover
+
+
+탑배너 다단메뉴내려오기 슬라이더 간단한hover 제품슬라이드 푸터 가상요소(before,after) https://c1jang.github.io/project01/
+
+
+https://github.com/desipossa 선생님수업용 github
+https://c1jang.github.io/#intro 수업자료 포폴
+https://github.com/sipossa 선생님 github
+
+
+https://xpressengine.github.io/XEIcon/ XE아이콘 쓰는법 : CSS에 @import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+
+괄호는 함수 괄호안에잇는 것은 매개변수(파라미트)
+
+on은 이벤트, 콜백함수
+
+!import를 사용하면 css를 자바스크립트보다 우선해서 사용할 수 있음
+
+ID는 한가지 이름밖에 못쓰는 속성이 있음
+
+
+HTML기본 구조
+ <div class="Wrap">
+        <header class="header"></header>
+        <main></main>
+        <footer class="footer"></footer>
+    </div>
+
+

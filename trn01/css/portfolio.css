@@ -45,15 +45,12 @@
 }
 
 #portfolio .section.on h2 {
-    animation: first 0.5s both;
+    transform: translateY(0);
+    opacity: 1;
+    transition: 0.5s;
 }
 
-@keyframes first {
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
+
 
 #footer .toTop {
     position: fixed;

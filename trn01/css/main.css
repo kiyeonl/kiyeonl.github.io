@@ -1,4 +1,12 @@
-.Wrap {}
+/* 색깔 선언해서 쓰는 방법 한번에 바꿀 때 유용
+:root {
+    --dark: #000;
+}
+
+
+.Wrap {
+    background: var(--dark);
+}*/
 
 .top_banner {
     padding: 30px 0;
@@ -349,4 +357,172 @@
     border: 1px solid #f00;
     padding: 5px 15px;
     margin: 0 0 20px 0;
+}
+
+.fixed_bg {
+    padding: 150px 0;
+    color: #fff;
+    text-align: center;
+    background: url(../img/mainvisual01.jpg) no-repeat fixed center center/cover;
+    /*background-attachment: fixed;*/
+    filter: grayscale(1);
+    /*흑백필터 적용법*/
+}
+
+.fixed_bg h2 {
+    font-size: 23px;
+    /*nato-sans는 폰트사이즈 홀 수 일 때 가독성이 좋음*/
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+.fixed_bg p {
+    font-size: 15px;
+    /*nato-sans는*/
+    font-weight: 300;
+    margin: 0 0 30px 0;
+}
+
+.fixed_bg i {
+    padding: 5px;
+    background: #333;
+    font-size: 21px;
+    margin: 0 0 0 15px;
+    vertical-align: -25%;
+    /*인라인 친구들을 가운데로 맞추는 방법  vertical-align: middle;로 할 수 도 있음*/
+    border-radius: 50%;
+}
+
+.movie {
+    padding: 100px 0;
+
+}
+
+.movie .container {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    gap: 50px;
+}
+
+.movie .container>* {
+    flex: 1;
+    /*자식들한테 똑같은 크기를 주겠다는 뜻*/
+}
+
+
+.movie .container video {
+    max-width: 100%;
+}
+
+.movie .container .dis {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*칼럼방향으로 진열된순간 축이 가로에서 세로로 바꼈으니까 세로로 가운데 오는 것이 가능한거*/
+
+}
+
+
+.movie h2 {
+    font-size: 23px;
+    /*nato-sans는 폰트사이즈 홀 수 일 때 가독성이 좋음*/
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+.movie p {
+    font-size: 15px;
+    /*nato-sans는*/
+    font-weight: 300;
+    margin: 0 0 30px 0;
+}
+
+.movie i {
+    padding: 10px;
+    background: #333;
+    border-radius: 3px;
+    font-size: 31px;
+    margin: 0 5px 0 0;
+    vertical-align: -25%;
+    /*인라인 친구들을 가운데로 맞추는 방법 middle로 할 수 도 있음*/
+    color: #fff;
+
+}
+
+.utb {
+    padding: 150px 0;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 0 3px #000;
+    filter: grayscale(1);
+}
+
+.utb h2 {
+    font-size: 23px;
+    /*nato-sans는 폰트사이즈 홀 수 일 때 가독성이 좋음*/
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+.utb p {
+    font-size: 15px;
+    /*nato-sans는*/
+    font-weight: 300;
+    margin: 0 0 30px 0;
+}
+
+.utb i {
+    padding: 10px;
+    background: #333;
+    border-radius: 3px;
+    font-size: 31px;
+    margin: 0 3px;
+    color: #fff;
+}
+
+.product_list {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.product_list h2 {
+    font-size: 23px;
+    /*nato-sans는 폰트사이즈 홀 수 일 때 가독성이 좋음*/
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+.product_list p {
+    font-size: 15px;
+    /*nato-sans는*/
+    font-weight: 300;
+    margin: 0 0 30px 0;
+}
+
+.product_list .container {
+    width: 1200px;
+    /*사진 패딩 15px 때문에 라인을 맞춰주기 위해 width를 1230px로 주거나 자바스크립트작업*/
+    margin: 0 auto;
+}
+
+.product_list .container figure {
+    padding: 0 15px;
+}
+
+.product_list .slick-dots {
+    /*slick-dots는 slick에서 만든 클래스*/
+}
+
+.product_list .slick-dots li {
+    display: inline-block;
+    margin: 20px 2px;
+}
+
+.product_list .slick-dots li button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    outline: none;
+    background-color: #fd7e14;
 }
