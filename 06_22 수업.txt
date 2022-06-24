@@ -1,0 +1,36 @@
+내용물을 없애는법
+display:none; 공간까지 없앰 애니메이션 안먹음 강력한명령어라서 아예 구조를 없앰
+opacity:0 공간을 살려둠
+visibility:hidden 공간을 살려둠 애니메이션 안먹음 
+
+
+height은 수치가 아닐 때는 애니메이션 안먹음
+
+
+position static : absolute를가라앉힘 흐름에 들어간다/좌표를 무산화함 (탭메뉴를 쓸 때 꼭 필요함)
+position relative : 기준이 됨
+position absolute left와 right값을 동시에 줄 수 있음 (옆으로 늘어남)
+position fixed : 기준이 아예없음 (view port-화면를 기준으로 함)
+
+
+자바스크립트 :이벤트 전파
+event target :이벤트를 일으키는 a
+event current target : a를 둘러싼 li
+
+
+지도 반응형에서 비율 맞추는 법(동영상 응용가능)
+height: auto/100%는 잘 안먹음
+
+box를 하나 싸고 position:relatve를 줌
+박스 안에 absolute를 띄워서 height:100%
+박스 높이에 padding-bottom:56.25%(9/16)을 줌
+
+폰트 반응형 쓰는 법 : vw(ViewWidth)
+
+align-items : flex-start하면 높이 맞춰서 늘어나는 현상 제어가능
+
+justify-content:space-between을 세로로쓰는 법 : flex-direction:coulmn을활용
+
+
+
+ 
