@@ -31,7 +31,7 @@ $(function () {
         // console.log(e, s, c);//0,1,2 https://github.com/kenwheeler/slick/ 참조
         // $('.main_slider figure').eq(c + 1).addClass('on').siblings.removeClass('on')
 
-        let current = $('.slick-current');
+        let current = $('.main_slider .slick-current');
         current.addClass('on').siblings().removeClass('on');//slbling()함수는 나를 제외한 나머지 형제들 이라는 뜻
         $('.slideNum').text((c ? c + 1 : 1) + "/" + s.slideCount); //삼항연산자 : C가 있으면 C+1이고 아니면1을 붙혀라(C는 0이기 때문에 숫자로 인식하지 못함)
 
@@ -95,7 +95,97 @@ $(function () {
         centerMode: true,
         slidesToShow: 5,
         dots: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1
+                }
+
+            }
+        ]
     });
+
+    $('.product_arrows i:nth-child(1)').on('click', function () {
+        $('.product_slider').slick('slickPrev');
+    });
+
+    $('.product_arrows i:nth-child(2)').on('click', function () {
+        $('.product_slider').slick('slickNext');
+    });
+
+    $('.hd_left_slider').slick({
+        arrows: false,
+        fade: true,
+        asNavFor: '.hd_right_slider',
+    });
+    $('.hd_right_slider').slick({
+        arrows: false,
+        slidesToShow: 5,
+        asNavFor: '.hd_left_slider',
+    });
+
+    $('.hd_section .hd_arrows i:nth-child(1)').on('click', function () {
+        $('.hd_right_slider').slick('slickPrev');
+    });
+
+    $('.hd_section .hd_arrows i:nth-child(2)').on('click', function () {
+        $('.hd_right_slider').slick('slickNext');
+    });
+
+    $('.tab_menu li a').on('click', function (e) {
+        e.preventDefault();
+        //console.log($(this), $(this).parent().index());
+        var idx = $(this).parent().index();
+        $(this).parent().addClass('on').siblings().removeClass('on');
+        $('.tab_content>div').eq(idx).addClass('on').siblings().removeClass('on');
+    });
+
+    $('#fl').on('change', function () {
+        var lik = $(this).val();
+        lik && window.open(lik);
+        // if (lik)
+        //window.open(lik);
+    });
+
+    $('.to_top').on('click', function () {
+        $('html, body').animate({ scrollTop: 0 }, 1000);
+    });
+
+    $(window).on('scroll', function () {
+        var sct = $(window).scrollTop();
+        sct > 800
+            ? $('.to_top').fadeIn()
+            : $('.to_top').fadeOut(1000)
+
+        //삼항연산자라고함!
+
+        // if (sct > 800) {
+        //     $('.to_top').fadeIn()
+        // } else {
+        //     $('.to_top').fadeOut(1000)
+        // }
+    });
+
+    $('.mopen').on('click', function () {
+        $(this).toggleClass('on');
+        $('nav').toggleClass('on');
+    });
+
+    $('.header ul>li>a').on('click', function (event) {
+        var idx = $(this).parent().index();
+        if ($('nav').hasClass('on') && idx < 3) {
+            event.preventDefault();
+            $(this).next().stop().slideToggle();
+            $(this).parent().siblings().find('ul').slideUp();
+        }
+    });
+
+    $(window).on('resize', function () {
+        $('nav').removeClass('on');
+        $('.header ul ul').removeAttr('style');
+    });
+
 
 
 });
